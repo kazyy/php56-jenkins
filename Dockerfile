@@ -3,9 +3,9 @@ RUN yum install -y epel-release
 RUN rpm -U --force http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 
 # PHP関連
-yum install -y --enablerepo=remi-php56 php
-yum install -y --enablerepo=remi-php56 php-common php-pecl-xdebug php-xml php-devel php-pear-XML-Serializer
-yum install -y --enablerepo=remi-php56 php-phpunit-PHPUnit php-phpmd-PHP-PMD php-phpunit-phpcpd php-pear-PHP-CodeSniffer
+RUN yum install -y --enablerepo=remi-php56 php
+RUN yum install -y --enablerepo=remi-php56 php-common php-pecl-xdebug php-xml php-devel php-pear-XML-Serializer
+RUN yum install -y --enablerepo=remi-php56 php-phpunit-PHPUnit php-phpmd-PHP-PMD php-phpunit-phpcpd php-pear-PHP-CodeSniffer
 
 # jenkins構築
 RUN yum install -y java-1.8.0-openjdk-devel
