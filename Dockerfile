@@ -35,7 +35,7 @@ ADD http://updates.jenkins-ci.org/download/plugins/javadoc/1.4/javadoc.hpi /var/
 ADD http://updates.jenkins-ci.org/download/plugins/display-url-api/2.1.0/display-url-api.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/junit/1.21/junit.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/matrix-project/1.12/matrix-project.hpi /var/lib/jenkins/plugins/
-ADD http://updates.jenkins-ci.org/download/plugins/structs/1.10/structs.hpi /var/lib/jenkins/plugins/
+ADD http://updates.jenkins-ci.org/download/plugins/structs/1.18/structs.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/matrix-auth/2.2/matrix-auth.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/antisamy-markup-formatter/1.5/antisamy-markup-formatter.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/script-security/1.35/script-security.hpi /var/lib/jenkins/plugins/
@@ -48,6 +48,9 @@ ADD http://updates.jenkins-ci.org/download/plugins/checkstyle/3.49/checkstyle.hp
 ADD http://updates.jenkins-ci.org/download/plugins/pmd/3.49/pmd.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/dry/2.49/dry.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/git/3.10.1/git.hpi /var/lib/jenkins/plugins/
+ADD http://updates.jenkins-ci.org/download/plugins/git-client/2.7.7/git-client.hpi /var/lib/jenkins/plugins/
+ADD http://updates.jenkins-ci.org/download/plugins/scm-api/2.2.6/scm-api.hpi /var/lib/jenkins/plugins/
+ADD http://updates.jenkins-ci.org/download/plugins/workflow-scm-step/2.4/workflow-scm-step.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/phing/0.13.3/phing.hpi /var/lib/jenkins/plugins/
 RUN chown -R jenkins:jenkins /var/lib/jenkins/plugins
 RUN chown -R jenkins:jenkins /usr/lib/jenkins
