@@ -5,7 +5,7 @@ RUN rpm -U --force http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 # PHP関連
 RUN yum install -y --enablerepo=remi-php56 php
 RUN yum install -y --enablerepo=remi-php56 php-common php-pecl-xdebug php-xml php-devel php-pear-XML-Serializer
-RUN yum install -y --enablerepo=remi-php56 php-phpunit-PHPUnit php-phpmd-PHP-PMD php-phpunit-phpcpd php-pear-PHP-CodeSniffer
+RUN yum install -y --enablerepo=remi-php56 php-phpunit-PHPUnit php-phpmd-PHP-PMD php-phpunit-phpcpd php-pear-PHP-CodeSniffer php-pear-phing
 RUN sed -i 's/^memory_limit.*/memory_limit=512M/' /etc/php.ini
 RUN echo "date.timezone=Asia/Tokyo" >> /etc/php.ini
 
@@ -47,7 +47,9 @@ ADD http://updates.jenkins-ci.org/download/plugins/cloverphp/0.5/cloverphp.hpi /
 ADD http://updates.jenkins-ci.org/download/plugins/checkstyle/3.49/checkstyle.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/pmd/3.49/pmd.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/dry/2.49/dry.hpi /var/lib/jenkins/plugins/
+ADD http://updates.jenkins-ci.org/download/plugins/git/3.10.1/git.hpi /var/lib/jenkins/plugins/
 ADD http://updates.jenkins-ci.org/download/plugins/phing/0.13.3/phing.hpi /var/lib/jenkins/plugins/
 RUN chown -R jenkins:jenkins /var/lib/jenkins/plugins
+RUN chown -R jenkins:jenkins /usr/lib/jenkins
 
 ENTRYPOINT service jenkins start && /bin/bash
