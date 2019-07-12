@@ -55,4 +55,6 @@ ADD http://updates.jenkins-ci.org/download/plugins/phing/0.13.3/phing.hpi /var/l
 RUN chown -R jenkins:jenkins /var/lib/jenkins/plugins
 RUN chown -R jenkins:jenkins /usr/lib/jenkins
 
+RUN yum install -y git
+
 ENTRYPOINT service jenkins start && /bin/bash
